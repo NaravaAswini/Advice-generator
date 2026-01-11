@@ -1,0 +1,117 @@
+/* Reset & Font */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%);
+}
+
+/* Container */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title */
+.title {
+  color: #c3507e; /* golden yellow */
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  font-weight: 600;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+
+/* Advice Card */
+.advice-card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 25px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+  max-width: 450px;
+  margin: auto;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.advice-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* Advice Text */
+#advice {
+  font-size: 1.3rem;
+  color: #333;
+  margin-bottom: 30px;
+  min-height: 70px;
+  transition: opacity 0.3s;
+}
+
+/* Dice Wrapper */
+.dice-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+/* Dice */
+.dice {
+  width: 90px;
+  height: 90px;
+  background-color: #e74c3c; /* red dice */
+  border-radius: 18px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.dice:hover {
+  transform: scale(1.25);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Dice dots */
+.dice .dot {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* Dot positions (0–8) */
+.dot-pos-0 { top: 12%; left: 12%; }
+.dot-pos-1 { top: 12%; left: 50%; transform: translateX(-50%); }
+.dot-pos-2 { top: 12%; right: 12%; }
+.dot-pos-3 { top: 50%; left: 12%; transform: translateY(-50%); }
+.dot-pos-4 { top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.dot-pos-5 { top: 50%; right: 12%; transform: translateY(-50%); }
+.dot-pos-6 { bottom: 12%; left: 12%; }
+.dot-pos-7 { bottom: 12%; left: 50%; transform: translateX(-50%); }
+.dot-pos-8 { bottom: 12%; right: 12%; }
+
+/* Footer */
+.footer {
+  margin-top: 25px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media(max-width: 480px){
+  .title { font-size: 1.8rem; }
+  .advice-card { padding: 30px 20px; }
+  .dice { width: 70px; height: 70px; border-radius: 15px; }
+  .dice .dot { width: 12px; height: 12px; }
+}
